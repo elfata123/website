@@ -20,7 +20,7 @@
     <div class="card card-tale">
       <div class="card-body">
         <p class="mb-4">Total Counter</p>
-        <p class="fs-30 mb-2">0</p>
+        <p class="fs-30 mb-2">{{ $counters }}</p>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
     <div class="card card-dark-blue">
       <div class="card-body">
         <p class="mb-4">Total Product</p>
-        <p class="fs-30 mb-2">0</p>
+        <p class="fs-30 mb-2">{{ $products }}</p>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
     <div class="card card-light-blue">
       <div class="card-body">
         <p class="mb-4">Total Staff</p>
-        <p class="fs-30 mb-2">0</p>
+        <p class="fs-30 mb-2">{{ $staff }}</p>
       </div>
     </div>
   </div>
@@ -50,7 +50,7 @@
     <div class="card card-light-danger">
       <div class="card-body">
         <p class="mb-4">Total Promo</p>
-        <p class="fs-30 mb-2">0</p>
+        <p class="fs-30 mb-2">{{ $promos }}</p>
       </div>
     </div>
   </div>

@@ -28,8 +28,13 @@
 
         <button class="btn btn-primary">Simpan</button>
 
-        <a href="{{ route('admin.counters.detail', $staff->counter_id) }}" 
-           class="btn btn-secondary ms-1">Kembali</a>
+        @if ($staff->counter_id)
+            <a href="{{ route('admin.counters.detail', $staff->counter_id) }}" 
+               class="btn btn-secondary ms-1">Kembali</a>
+        @else
+            <a href="{{ route('admin.staff.index') }}" 
+               class="btn btn-secondary ms-1">Kembali</a>
+        @endif
 
     </form>
 

@@ -21,9 +21,9 @@
             <input type="hidden" name="counter_id" value="{{ $counter->id }}">
         @else
             <div class="mb-3">
-                <label class="form-label fw-bold">Pilih Counter</label>
-                <select name="counter_id" class="form-control" required>
-                    <option value="">-- Pilih Counter --</option>
+                <label class="form-label fw-bold">Pilih Counter (Kosongkan untuk Staff Umum)</label>
+                <select name="counter_id" class="form-control">
+                    <option value="">-- Staff Umum (Tidak ada Counter) --</option>
                     @foreach($counters as $c)
                         <option value="{{ $c->id }}">{{ $c->nama }}</option>
                     @endforeach

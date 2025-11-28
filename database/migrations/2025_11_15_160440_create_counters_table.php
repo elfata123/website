@@ -7,16 +7,23 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Tabel Counters - Menyimpan data toko/outlet Ria Busana
+     * 
+     * Columns:
+     * - id: Primary key auto increment
+     * - nama: Nama counter/toko (misal: "Toko Pusat", "Counter 1")
+     * - lokasi: Lokasi geografis toko (misal: "Mall XYZ, Lt. 2")
+     * - pegawai: Field legacy (masih ada tapi tidak digunakan, sudah dipindah ke staff table)
+     * - timestamps: created_at & updated_at untuk audit trail
      */
     public function up(): void
     {
         Schema::create('counters', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('lokasi')->nullable();
-            $table->string('pegawai')->nullable(); // opsional, nanti bisa dipisah ke tabel staff
-            $table->timestamps();
+            $table->string('nama');                       // Nama counter
+            $table->string('lokasi')->nullable();         // Lokasi counter
+            $table->string('pegawai')->nullable();        // Legacy field - gunakan Staff table
+            $table->timestamps();                         // created_at, updated_at
         });
     }
 

@@ -42,7 +42,7 @@ class StaffController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'counter_id' => 'required|exists:counters,id',
+            'counter_id' => 'nullable|exists:counters,id',
             'nama'       => 'required|string|max:191',
             'jabatan'    => 'required|string|max:191',
         ]);
@@ -53,9 +53,16 @@ class StaffController extends Controller
             'jabatan'    => $request->jabatan,
         ]);
 
-        return redirect()
-            ->route('admin.counters.detail', $request->counter_id)
-            ->with('success', 'Staff berhasil ditambahkan!');
+        // Redirect ke counter detail jika ada counter_id, else ke staff index
+        if ($request->counter_id) {
+            return redirect()
+                ->route('admin.counters.detail', $request->counter_id)
+                ->with('success', 'Staff berhasil ditambahkan!');
+        } else {
+            return redirect()
+                ->route('admin.staff.index')
+                ->with('success', 'Staff umum berhasil ditambahkan!');
+        }
     }
 
     /**

@@ -38,7 +38,7 @@
 
                     <td>{{ $p->nama }}</td>
 
-                    <td>{{ $p->counter->nama }}</td>
+                    <td>{{ $p->counter ? $p->counter->nama : '-' }}</td>
 
                     <td>Rp {{ number_format($p->harga, 0, ',', '.') }}</td>
 

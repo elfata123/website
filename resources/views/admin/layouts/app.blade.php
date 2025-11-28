@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="{{ asset('purple/assets/vendors/font-awesome/css/font-awesome.min.css') }}">
     <link rel="stylesheet"
         href="{{ asset('purple/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('purple/assets/css/style.css') }}">
 
-    <link rel="shortcut icon" href="{{ asset('purple/assets/images/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('amoeba-assets/img/logo rb no bg.png') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('amoeba-assets/img/logo rb no bg.png') }}" />
 </head>
 
 <body>

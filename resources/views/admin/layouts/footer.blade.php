@@ -1,6 +1,33 @@
 <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved. Distributed by <a href="http://themewagon.com" target="_blank">ThemeWagon</a></span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+            <div class="d-flex flex-column gap-3">
+              <!-- Logo & Brand -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img src="{{ asset('amoeba-assets/img/logo.png') }}" alt="Ria Busana 85" style="height: 40px;">
+                <span class="fw-bold text-dark">Ria Busana 85</span>
+              </div>
+
+              <!-- Main Footer Content -->
+              <div class="d-sm-flex justify-content-sm-between align-items-center">
+                <span class="text-muted d-block mb-2 mb-sm-0">
+                  © 2025 <strong>Ria Busana 85</strong>. All Rights Reserved.
+                </span>
+                <div class="d-flex gap-2 align-items-center">
+                  <!-- Social Media -->
+                  <span class="text-muted me-2">Follow us:</span>
+                  <a href="https://facebook.com" target="_blank" class="btn btn-sm btn-outline-primary" title="Facebook">
+                    <i class="mdi mdi-facebook"></i>
+                  </a>
+                  <a href="https://instagram.com" target="_blank" class="btn btn-sm btn-outline-danger" title="Instagram">
+                    <i class="mdi mdi-instagram"></i>
+                  </a>
+                  <a href="https://twitter.com" target="_blank" class="btn btn-sm btn-outline-info" title="Twitter">
+                    <i class="mdi mdi-twitter"></i>
+                  </a>
+                  <!-- Member Button -->
+                  <a href="https://riabusana85.com" target="_blank" class="btn btn-sm btn-success ms-2" title="Member Area">
+                    <i class="mdi mdi-account-circle"></i> Member
+                  </a>
+                </div>
+              </div>
             </div>
           </footer>

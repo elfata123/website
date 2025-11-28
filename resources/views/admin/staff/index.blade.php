@@ -31,7 +31,11 @@
                     <td>{{ $s->jabatan }}</td>
 
                     <td>
-                        <span class="badge badge-info">{{ $s->counter->nama }}</span>
+                        @if ($s->counter)
+                            <span class="badge badge-info">{{ $s->counter->nama }}</span>
+                        @else
+                            <span class="badge badge-secondary">Staff Umum</span>
+                        @endif
                     </td>
 
                     <td>
