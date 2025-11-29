@@ -279,7 +279,7 @@
                         data-aos-delay="200">
                         <i class="bi bi-geo-alt"></i>
                         <h3>Alamat</h3>
-                        <p>Jl. Raya Ria Busana 85<br>Jakarta, IndonesiaJalan Ahmad Yani No. 129-131, Ciwalen, Garut, Jawa Barat, 44161</p>
+                        <p>Jln. Ahmad Yani No. 129-131,<br>Ciwalen, Garut, Jawa Barat, 44161</p>
                     </div>
 
                     <div class="col-lg-4 info-item d-flex flex-column justify-content-center" data-aos="fade-up"
@@ -333,13 +333,13 @@
                         <p class="mb-2"><strong>Follow Us:</strong></p>
                         <div class="d-flex gap-2">
                             <a href="https://facebook.com" target="_blank" class="text-decoration-none" title="Facebook">
-                                <i class="bi bi-facebook" style="font-size: 1.5rem; color: #0064C8;"></i>
+                                <i class="bi bi-facebook" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
                             <a href="https://instagram.com" target="_blank" class="text-decoration-none" title="Instagram">
-                                <i class="bi bi-instagram" style="font-size: 1.5rem; color: #0064C8;"></i>
+                                <i class="bi bi-instagram" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
                             <a href="https://twitter.com" target="_blank" class="text-decoration-none" title="Twitter">
-                                <i class="bi bi-twitter" style="font-size: 1.5rem; color: #0064C8;"></i>
+                                <i class="bi bi-twitter" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
                         </div>
                     </div>
@@ -370,7 +370,7 @@
                 <div class="col-lg-4 col-md-12 footer-contact">
                     <h4>Hubungi Kami</h4>
                     <p>
-                        <strong><i class="bi bi-geo-alt"></i> Alamat:</strong> <br>Jalan Ahmad Yani No. 129-131, Ciwalen, Garut, Jawa Barat, 44161<br>
+                        <strong><i class="bi bi-geo-alt"></i> Alamat:</strong> <br>Jln. Ahmad Yani No. 129-131, Ciwalen, Garut, Jawa Barat, 44161<br>
                         <strong><i class="bi bi-telephone"></i> Telepon:</strong> <br><a href="tel:+62211234567">+62 21-1234-567</a><br>
                         <strong><i class="bi bi-envelope"></i> Email:</strong> <br><a href="mailto:info@riabusana85.com">info@riabusana85.com</a>
                     </p>
