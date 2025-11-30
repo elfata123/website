@@ -30,12 +30,12 @@ return new class extends Migration
             $table->string('nama');                                  // Nama staff
             $table->string('jabatan')->nullable();                   // Jabatan/posisi
             $table->timestamps();                                    // created_at, updated_at
-            
+
             // Foreign key constraint dengan cascade delete
             $table->foreign('counter_id')
-                  ->references('id')
-                  ->on('counters')
-                  ->onDelete('cascade');                             // Hapus staff jika counter dihapus
+                ->references('id')
+                ->on('counters')
+                ->onDelete('cascade');                             // Hapus staff jika counter dihapus
         });
     }
 

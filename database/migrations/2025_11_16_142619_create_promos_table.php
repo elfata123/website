@@ -30,9 +30,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('product_id');              // FK ke product
             $table->foreign('product_id')
-                  ->references('id')
-                  ->on('products')
-                  ->onDelete('cascade');                           // Hapus promo jika produk dihapus
+                ->references('id')
+                ->on('products')
+                ->onDelete('cascade');                           // Hapus promo jika produk dihapus
             $table->text('deskripsi')->nullable();                 // Deskripsi promosi
             $table->integer('harga_asli');                         // Harga normal (Rp)
             $table->integer('diskon')->nullable();                 // Persentase diskon (%)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             justify-content: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         .login-container {
             width: 100%;
             max-width: 450px;
@@ -120,59 +121,46 @@
 
 <body>
 
-<div class="login-container">
-    <div class="login-box">
-        <h3 class="login-title">Ria Busana 85</h3>
-        <p class="login-subtitle">Admin Panel Login</p>
+    <div class="login-container">
+        <div class="login-box">
+            <h3 class="login-title">Ria Busana 85</h3>
+            <p class="login-subtitle">Admin Panel Login</p>
 
-        @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
 
-        @if(session('message'))
-            <div class="alert alert-info">
-                {{ session('message') }}
-            </div>
-        @endif
+            @if (session('message'))
+                <div class="alert alert-info">
+                    {{ session('message') }}
+                </div>
+            @endif
 
-        <form method="POST" action="{{ route('admin.login') }}">
-            @csrf
+            <form method="POST" action="{{ route('admin.login') }}">
+                @csrf
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input 
-                    type="email" 
-                    id="email"
-                    name="email" 
-                    class="form-control" 
-                    required 
-                    placeholder="Enter your email"
-                    autocomplete="email"
-                >
-            </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                        placeholder="Enter your email" autocomplete="email">
+                </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input 
-                    type="password" 
-                    id="password"
-                    name="password" 
-                    class="form-control" 
-                    required 
-                    placeholder="Enter your password"
-                    autocomplete="current-password"
-                >
-            </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required
+                        placeholder="Enter your password" autocomplete="current-password">
+                </div>
 
-            <button type="submit" class="btn-login">Login</button>
-        </form>
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- Bootstrap JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

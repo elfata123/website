@@ -116,7 +116,8 @@
                 <!-- About Section -->
                 <div class="col-lg-4 col-md-12 footer-about">
                     <a href="{{ route('amoeba') }}" class="logo d-flex align-items-center mb-3">
-                        <img src="{{ asset('amoeba-assets/img/logo.png') }}" alt="Ria Busana 85 Logo" style="max-height: 45px;">
+                        <img src="{{ asset('amoeba-assets/img/logo.png') }}" alt="Ria Busana 85 Logo"
+                            style="max-height: 45px;">
                         <span class="sitename ms-2 fw-bold">Ria Busana 85</span>
                     </a>
                     <p>Toko busana modern terpercaya dengan koleksi lengkap dan pelayanan profesional.</p>
@@ -124,13 +125,16 @@
                     <div class="mt-3">
                         <p class="mb-2"><strong>Follow Us:</strong></p>
                         <div class="d-flex gap-2">
-                            <a href="https://facebook.com" target="_blank" class="text-decoration-none" title="Facebook">
+                            <a href="https://facebook.com" target="_blank" class="text-decoration-none"
+                                title="Facebook">
                                 <i class="bi bi-facebook" style="font-size: 1.5rem; color: #0064C8;"></i>
                             </a>
-                            <a href="https://instagram.com" target="_blank" class="text-decoration-none" title="Instagram">
+                            <a href="https://instagram.com" target="_blank" class="text-decoration-none"
+                                title="Instagram">
                                 <i class="bi bi-instagram" style="font-size: 1.5rem; color: #0064C8;"></i>
                             </a>
-                            <a href="https://twitter.com" target="_blank" class="text-decoration-none" title="Twitter">
+                            <a href="https://twitter.com" target="_blank" class="text-decoration-none"
+                                title="Twitter">
                                 <i class="bi bi-twitter" style="font-size: 1.5rem; color: #0064C8;"></i>
                             </a>
                         </div>
@@ -163,8 +167,10 @@
                     <h4>Hubungi Kami</h4>
                     <p>
                         <strong><i class="bi bi-geo-alt"></i> Alamat:</strong> <br>Jl. Raya Ria Busana 85, Jakarta<br>
-                        <strong><i class="bi bi-telephone"></i> Telepon:</strong> <br><a href="tel:+62211234567">+62 21-1234-567</a><br>
-                        <strong><i class="bi bi-envelope"></i> Email:</strong> <br><a href="mailto:info@riabusana85.com">info@riabusana85.com</a>
+                        <strong><i class="bi bi-telephone"></i> Telepon:</strong> <br><a href="tel:+62211234567">+62
+                            21-1234-567</a><br>
+                        <strong><i class="bi bi-envelope"></i> Email:</strong> <br><a
+                            href="mailto:info@riabusana85.com">info@riabusana85.com</a>
                     </p>
                 </div>
             </div>
@@ -172,10 +178,12 @@
             <!-- Copyright Section -->
             <div class="row copyright mt-4 pt-4 border-top">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">© <span>Copyright</span> <strong class="px-1 sitename">Ria Busana 85</strong> <span>All Rights Reserved</span></p>
+                    <p class="mb-0">© <span>Copyright</span> <strong class="px-1 sitename">Ria Busana 85</strong>
+                        <span>All Rights Reserved</span></p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Powered by <a href="https://laravel.com" target="_blank">Laravel</a></p>
+                    <p class="mb-0">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Powered by
+                        <a href="https://laravel.com" target="_blank">Laravel</a></p>
                 </div>
             </div>
         </div>

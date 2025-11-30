@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+docker-compose.override.yml
+.DS_Store
+.git
+.gitignore
+.editorconfig
+*.log
+storage/logs
+storage/framework/cache
+storage/framework/sessions
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.phpunit.result.cache

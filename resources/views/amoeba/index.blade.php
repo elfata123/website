@@ -22,11 +22,11 @@
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Counter</a></li>
                     <li><a href="#team">Staff</a></li>
-                    <li><a href="#contact">Kontak</a></li>
-                    <li><a href="https://member.riabusana.co.id/" target="_blank">Member</a></li>
+                    <li><a href="#promo">Discount</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -57,8 +57,11 @@
                         <div class="content">
                             <h3>Tentang Toko</h3>
                             <h2>Kenapa Harus RB 85</h2>
-                            <p>Karena Koleksi lengkap untuk seluruh keluarga Produk berkualitas & nyaman digunakan selain itu Harga nya murah sebelum diskon.</p>
-                            <p>Kami adalah toko busana modern yang menghadirkan pilihan pakaian baru yang sedang tren. Dengan koleksi yang selalu mengikuti tren, kami berkomitmen untuk memberikan pengalaman berbelanja yang nyaman, mudah, dan terpercaya.</p>
+                            <p>Karena Koleksi lengkap untuk seluruh keluarga Produk berkualitas & nyaman digunakan
+                                selain itu Harga nya murah sebelum diskon.</p>
+                            <p>Kami adalah toko busana modern yang menghadirkan pilihan pakaian baru yang sedang tren.
+                                Dengan koleksi yang selalu mengikuti tren, kami berkomitmen untuk memberikan pengalaman
+                                berbelanja yang nyaman, mudah, dan terpercaya.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
@@ -124,8 +127,9 @@
                             <div class="col-lg-4 col-md-6 portfolio-item" data-aos="fade-up" data-aos-delay="100">
                                 <div class="card h-100">
                                     @if ($product->gambar)
-                                        <img src="{{ asset('upload/produk/' . $product->gambar) }}" class="card-img-top"
-                                            alt="{{ $product->nama }}" style="height: 250px; object-fit: cover;">
+                                        <img src="{{ asset('upload/produk/' . $product->gambar) }}"
+                                            class="card-img-top" alt="{{ $product->nama }}"
+                                            style="height: 250px; object-fit: cover;">
                                     @else
                                         <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center"
                                             style="height: 250px;">
@@ -170,42 +174,44 @@
                             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                                 <div class="card h-100 shadow-sm">
                                     @if ($promo->product->gambar)
-                                        <img src="{{ asset('upload/produk/' . $promo->product->gambar) }}" 
-                                             class="card-img-top"
-                                             alt="{{ $promo->product->nama }}" 
-                                             style="height: 200px; object-fit: cover;">
+                                        <img src="{{ asset('upload/produk/' . $promo->product->gambar) }}"
+                                            class="card-img-top" alt="{{ $promo->product->nama }}"
+                                            style="height: 200px; object-fit: cover;">
                                     @else
                                         <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center"
                                             style="height: 200px;">
                                             <i class="bi bi-image" style="font-size: 3rem; color: #ccc;"></i>
                                         </div>
                                     @endif
-                                    
+
                                     <!-- Badge Diskon -->
-                                    <div style="position: absolute; top: 10px; right: 10px; background: #dc3545; color: white; padding: 5px 10px; border-radius: 50%; font-weight: bold; font-size: 18px;">
+                                    <div
+                                        style="position: absolute; top: 10px; right: 10px; background: #dc3545; color: white; padding: 5px 10px; border-radius: 50%; font-weight: bold; font-size: 18px;">
                                         -{{ $promo->diskon }}%
                                     </div>
 
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $promo->product->nama }}</h5>
-                                        <p class="card-text text-muted" style="font-size: 0.9rem;">{{ Str::limit($promo->deskripsi, 80) }}</p>
-                                        
+                                        <p class="card-text text-muted" style="font-size: 0.9rem;">
+                                            {{ Str::limit($promo->deskripsi, 80) }}</p>
+
                                         <!-- Harga Lama -->
                                         <p class="mb-2">
                                             <span class="text-muted" style="text-decoration: line-through;">
                                                 Rp {{ number_format($promo->harga_asli, 0, ',', '.') }}
                                             </span>
                                         </p>
-                                        
+
                                         <!-- Harga Baru -->
                                         <h5 class="card-text text-danger" style="font-weight: bold;">
                                             Rp {{ number_format($promo->harga_setelah_diskon, 0, ',', '.') }}
                                         </h5>
-                                        
+
                                         <!-- Periode -->
                                         <p class="text-muted" style="font-size: 0.85rem;">
-                                            <i class="bi bi-calendar-event"></i> 
-                                            {{ date('d M', strtotime($promo->mulai)) }} - {{ date('d M Y', strtotime($promo->berakhir)) }}
+                                            <i class="bi bi-calendar-event"></i>
+                                            {{ date('d M', strtotime($promo->mulai)) }} -
+                                            {{ date('d M Y', strtotime($promo->berakhir)) }}
                                         </p>
                                     </div>
                                 </div>
@@ -324,7 +330,8 @@
                 <!-- About Section -->
                 <div class="col-lg-4 col-md-12 footer-about">
                     <a href="{{ route('amoeba') }}" class="logo d-flex align-items-center mb-3">
-                        <img src="{{ asset('amoeba-assets/img/logo rb no bg.png') }}" alt="Ria Busana 85 Logo" style="max-height: 45px;">
+                        <img src="{{ asset('amoeba-assets/img/logo rb no bg.png') }}" alt="Ria Busana 85 Logo"
+                            style="max-height: 45px;">
                         <span class="sitename ms-2 fw-bold">Ria Busana 85</span>
                     </a>
                     <p>Toko busana modern terpercaya dengan koleksi lengkap dan pelayanan profesional.</p>
@@ -332,13 +339,16 @@
                     <div class="mt-3">
                         <p class="mb-2"><strong>Follow Us:</strong></p>
                         <div class="d-flex gap-2">
-                            <a href="https://facebook.com" target="_blank" class="text-decoration-none" title="Facebook">
+                            <a href="https://facebook.com" target="_blank" class="text-decoration-none"
+                                title="Facebook">
                                 <i class="bi bi-facebook" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
-                            <a href="https://instagram.com" target="_blank" class="text-decoration-none" title="Instagram">
+                            <a href="https://instagram.com" target="_blank" class="text-decoration-none"
+                                title="Instagram">
                                 <i class="bi bi-instagram" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
-                            <a href="https://twitter.com" target="_blank" class="text-decoration-none" title="Twitter">
+                            <a href="https://twitter.com" target="_blank" class="text-decoration-none"
+                                title="Twitter">
                                 <i class="bi bi-twitter" style="font-size: 1.5rem; color: #ffffff;"></i>
                             </a>
                         </div>
@@ -352,6 +362,7 @@
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">Tentang Kami</a></li>
                         <li><a href="#portfolio">Produk</a></li>
+                        <li><a href="#promo">Diskon</a></li>
                         <li><a href="#contact">Kontak</a></li>
                     </ul>
                 </div>
@@ -370,9 +381,12 @@
                 <div class="col-lg-4 col-md-12 footer-contact">
                     <h4>Hubungi Kami</h4>
                     <p>
-                        <strong><i class="bi bi-geo-alt"></i> Alamat:</strong> <br>Jln. Ahmad Yani No. 129-131, Ciwalen, Garut, Jawa Barat, 44161<br>
-                        <strong><i class="bi bi-telephone"></i> Telepon:</strong> <br><a href="tel:+62211234567">+62 21-1234-567</a><br>
-                        <strong><i class="bi bi-envelope"></i> Email:</strong> <br><a href="mailto:info@riabusana85.com">info@riabusana85.com</a>
+                        <strong><i class="bi bi-geo-alt"></i> Alamat:</strong> <br>Jln. Ahmad Yani No. 129-131,
+                        Ciwalen, Garut, Jawa Barat, 44161<br>
+                        <strong><i class="bi bi-telephone"></i> Telepon:</strong> <br><a href="tel:+62211234567">+62
+                            21-1234-567</a><br>
+                        <strong><i class="bi bi-envelope"></i> Email:</strong> <br><a
+                            href="mailto:info@riabusana85.com">info@riabusana85.com</a>
                     </p>
                 </div>
             </div>
@@ -380,10 +394,12 @@
             <!-- Copyright Section -->
             <div class="row copyright mt-4 pt-4 border-top">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">© <span>Copyright</span> <strong class="px-1 sitename">Ria Busana 85</strong> <span>All Rights Reserved</span></p>
+                    <p class="mb-0">© <span>Copyright</span> <strong class="px-1 sitename">Ria Busana 85</strong>
+                        <span>All Rights Reserved</span></p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Powered by <a href="https://laravel.com" target="_blank">Laravel</a></p>
+                    <p class="mb-0">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | Powered by
+                        <a href="https://laravel.com" target="_blank">Laravel</a></p>
                 </div>
             </div>
         </div>

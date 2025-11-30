@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # PHP Application Container
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ria_busana_app
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - ./public:/app/public
+    networks:
+      - ria_busana_network
+    depends_on:
+      - db
+
+  # Nginx Web Server
+  nginx:
+    image: nginx:alpine
+    container_name: ria_busana_nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/app
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+      - ./docker/nginx/ssl:/etc/nginx/ssl
+    networks:
+      - ria_busana_network
+    depends_on:
+      - app
+
+  # MySQL Database
+  db:
+    image: mysql:8.0
+    container_name: ria_busana_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-ria_busana_85}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-password}
+      MYSQL_USER: ${DB_USERNAME:-ria_busana}
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+    networks:
+      - ria_busana_network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # PhpMyAdmin (Optional - for database management)
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: ria_busana_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${DB_USERNAME:-ria_busana}
+      PMA_PASSWORD: ${DB_PASSWORD:-password}
+    networks:
+      - ria_busana_network
+    depends_on:
+      - db
+
+  # Redis Cache (Optional)
+  redis:
+    image: redis:7-alpine
+    container_name: ria_busana_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - ria_busana_network
+
+volumes:
+  dbdata:
+    driver: local
+
+networks:
+  ria_busana_network:
+    driver: bridge

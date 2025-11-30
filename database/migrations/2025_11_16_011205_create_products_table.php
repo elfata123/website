@@ -33,9 +33,9 @@ return new class extends Migration
 
             // Foreign key constraint
             $table->foreign('counter_id')
-                  ->references('id')
-                  ->on('counters')
-                  ->onDelete('cascade');                   // Hapus produk jika counter dihapus
+                ->references('id')
+                ->on('counters')
+                ->onDelete('cascade');                   // Hapus produk jika counter dihapus
         });
     }
 

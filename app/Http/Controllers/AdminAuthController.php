@@ -72,7 +72,7 @@ class AdminAuthController extends Controller
         // Hapus session admin_id dan flush semua session
         session()->forget('admin_id');
         session()->flush();
-        
+
         // Redirect ke login page
         return redirect('/admin/login')->with('message', 'Anda telah logout. Silakan login kembali.');
     }
