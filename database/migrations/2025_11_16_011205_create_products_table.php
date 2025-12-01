@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('nama');                        // Nama produk
             $table->text('deskripsi')->nullable();         // Deskripsi detail
             $table->integer('harga');                      // Harga produk (Rp)
+            $table->string('gambar')->nullable();          // Nama file gambar produk
             $table->timestamps();                          // created_at, updated_at
 
             // Foreign key constraint

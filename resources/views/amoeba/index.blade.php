@@ -138,8 +138,8 @@
                                     @endif
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $product->nama }}</h5>
-                                        <p class="card-text text-muted">{{ Str::limit($product->deskripsi, 100) }}</p>
-                                        <h6 class="card-text text-primary">Rp
+                                        <p class="card-text" style="color: #555; font-size: 0.9rem; margin-bottom: 0.75rem;">{{ Str::limit($product->deskripsi, 100) }}</p>
+                                        <h6 class="card-text text-primary fw-bold">Rp
                                             {{ number_format($product->harga, 0, ',', '.') }}</h6>
                                     </div>
                                 </div>
