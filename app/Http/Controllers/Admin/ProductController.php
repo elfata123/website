@@ -127,7 +127,13 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        Product::destroy($id);
+        $product = Product::findOrFail($id);
+        
+        if ($product->gambar && file_exists(public_path('upload/produk/' . $product->gambar))) {
+            unlink(public_path('upload/produk/' . $product->gambar));
+        }
+        
+        $product->delete();
 
         return redirect()->back()->with('success', 'Produk berhasil dihapus');
     }
