@@ -216,6 +216,7 @@ Website ini menampilkan 1 halaman dengan Sistem sederhana. adapun beberapa fitur
 
 ### Diagram Sistem
 
+![Use Case Diagram](./usecase.png)
 
 ---
 
